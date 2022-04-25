@@ -29,7 +29,7 @@ REST API to send notifications to users on SMS and WhatsApp.
 
     To send scheduled message on whatsapp:
     ```
-    POST https://notification-service-api.herokuapp.com/v1/notification/send-schedule-whatsapp/2
+    POST https://notification-service-api.herokuapp.com/v1/notification/send-schedule-whatsapp/:minutes
     ```
 
     To send instant message on sms:
@@ -39,7 +39,7 @@ REST API to send notifications to users on SMS and WhatsApp.
 
     To send scheduled message on sms:
     ```
-    POST https://notification-service-api.herokuapp.com/v1/notification/send-schedule-sms/2
+    POST https://notification-service-api.herokuapp.com/v1/notification/send-schedule-sms/:minutes
     ```
 
 ### Local
@@ -51,7 +51,7 @@ REST API to send notifications to users on SMS and WhatsApp.
 
     To send scheduled message on whatsapp:
     ```
-    POST http://localhost:3000/v1/notification/send-schedule-whatsapp/2
+    POST http://localhost:3000/v1/notification/send-schedule-whatsapp/:minutes
     ```
 
     To send instant message on sms:
@@ -61,7 +61,7 @@ REST API to send notifications to users on SMS and WhatsApp.
 
     To send scheduled message on sms:
     ```
-    POST http://localhost:3000/v1/notification/send-schedule-sms/2
+    POST http://localhost:3000/v1/notification/send-schedule-sms/:minutes
     ```
 
 ## Environment Variables
