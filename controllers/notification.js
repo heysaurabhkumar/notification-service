@@ -28,23 +28,27 @@ const sendInstantWhatsApp = catchAsync(async (req, res) => {
 });
 
 const sendSechduleSMS = catchAsync(async (req, res) => {
+  const { minute } = req.params;
+
   setTimeout(() => {
     contactList.forEach(async (contact) => {
       await smsService.sendSMS(contact.phone);
     });
-  }, 1000 * 60 * 2);
+  }, 1000 * 60 * minute);
 
   res.status(httpStatus.OK).json({
     success: true,
     message: "SMS scheduled successfully",
   });
 });
+
 const sendSechduleWhatsApp = catchAsync(async (req, res) => {
+  const { minute } = req.params;
   setTimeout(() => {
     contactList.map(async (contact) => {
       await whatsappService.sendWhatsApp(contact.phone);
     });
-  }, 1000 * 60 * 2);
+  }, 1000 * 60 * minute);
 
   res.status(httpStatus.OK).json({
     success: true,
